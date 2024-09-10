@@ -13,9 +13,9 @@ import java.io.File;
 import java.io.IOException;
 import java.time.Duration;
 
-public class Loginwithvalidcredentails
+public class LoginWithInvalidInformation 
 {
-	
+
 	WebDriver driver;
 
 	@Test
@@ -35,11 +35,11 @@ public class Loginwithvalidcredentails
 
 		//Locating the Element By using the ID Locator
 		WebElement Email = driver.findElement(By.id("username"));
-		Email.sendKeys("hazarathshaik286@gmail.com");
+		Email.sendKeys(" Haz75456897@#@Gmail.com");
 
 		//Locating the Element By using the ID Locator
 		WebElement Pwd = driver.findElement(By.id("password"));
-		Pwd.sendKeys("Hazarath@123");
+		Pwd.sendKeys("(*&^%$%874(*&^");
 
 		//Locating the Element By using the Xpath Locator
 		WebElement Login_But = driver.findElement(By.xpath("//button[@class ='btn btn-danger mt-3']"));
@@ -48,9 +48,9 @@ public class Loginwithvalidcredentails
 		//After Login With the Proof of Maintaining the  Screenshots of the Login.
 		 TakesScreenshot A1 = (TakesScreenshot) driver;
 		File Source =  A1.getScreenshotAs(OutputType.FILE);
-		 File Destination = new File("C:\\Users\\Hazarath\\Desktop\\Selenium Screenshots\\Pass\\Login.png");
+		 File Destination = new File("C:\\Users\\Hazarath\\Desktop\\Selenium Screenshots\\Pass\\login.png");
 		FileHandler.copy(Source, Destination);
 		
-		
-	}
+	}		
+
 }

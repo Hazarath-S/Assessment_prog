@@ -16,9 +16,11 @@ public class Login_page_parallely
 	WebDriver driver;
 	
 	@Test
+	//Using the Parameters Annotation give the Value
 	@Parameters("Broswers")
 	public void Login_page(String NameoftheBroswer) 
 	{
+		//Lanch the Multiple Multiple Broswers
 		if(NameoftheBroswer.equals("Chrome"))
 		{
 			driver = new ChromeDriver();
@@ -33,6 +35,7 @@ public class Login_page_parallely
 		{
 			driver = new FirefoxDriver();
 		}
+		//Maximize the Window
 		driver.manage().window().maximize();
 		driver.get("https://app.germanyiscalling.com/common/login/");
 
@@ -41,12 +44,15 @@ public class Login_page_parallely
 
 		// Finding the Elements of the Login page.
 
+		//Locating the Element By Using the ID Locator
 		WebElement Email = driver.findElement(By.id("username"));
 		Email.sendKeys("hazarathshaik286@gmail.com");
 
+		//Locating the Element By Using the ID Locator
 		WebElement Pwd = driver.findElement(By.id("password"));
 		Pwd.sendKeys("Hazarath@123");
 
+		//Locating the Element By Using the Xpath Locator
 		WebElement Login_But = driver.findElement(By.xpath("//button[@class ='btn btn-danger mt-3']"));
 		Login_But.click();
 		
